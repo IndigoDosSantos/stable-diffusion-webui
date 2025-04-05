@@ -244,6 +244,7 @@ axis_options = [
     AxisOptionTxt2Img("Hires steps", int, apply_field("hr_second_pass_steps")),
     AxisOption("CFG Scale", float, apply_field("cfg_scale")),
     AxisOptionImg2Img("Image CFG Scale", float, apply_field("image_cfg_scale")),
+    AxisOptionImg2Img("Mask Padding", int, apply_field("inpaint_full_res_padding")),
     AxisOption("Prompt S/R", str, apply_prompt, format_value=format_value),
     AxisOption("Prompt order", str_permutations, apply_order, format_value=format_value_join_list),
     AxisOptionTxt2Img("Sampler", str, apply_field("sampler_name"), format_value=format_value, confirm=confirm_samplers, choices=lambda: [x.name for x in sd_samplers.samplers if x.name not in opts.hide_samplers]),
